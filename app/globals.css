@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a1a1a;
+  --bg-secondary: #0d2626;
+  --bg-card: #133333;
+  --accent-gold: #d4af37;
+  --accent-green: #00ff88;
+  --text-primary: #ffffff;
+  --text-secondary: #a0b0b0;
+  --border-color: #2d4d4d;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
