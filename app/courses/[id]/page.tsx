@@ -93,7 +93,7 @@ export default function CourseDetail() {
                                     <div className="text-center">
                                         <Users className="w-6 h-6 text-accent-gold mx-auto mb-2" />
                                         <div className="text-sm text-text-secondary">Enrolled</div>
-                                        <div className="font-bold">1,200+</div>
+                                        <div className="font-bold">{course.students}</div>
                                     </div>
                                 </div>
 

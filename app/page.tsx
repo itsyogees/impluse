@@ -2,6 +2,7 @@
 
 import Navigation from '@/components/ui/Navigation'
 import Hero from '@/components/sections/Hero'
+import Introduction from '@/components/sections/Introduction'
 import Features from '@/components/sections/Features'
 import Indicators from '@/components/sections/Indicators'
 import Courses from '@/components/sections/Courses'
@@ -16,6 +17,7 @@ export default function Home() {
     <main className="min-h-screen">
       <Navigation />
       <Hero />
+      <Introduction />
       <Features />
       <Indicators />
       <Courses />

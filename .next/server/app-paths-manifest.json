@@ -4,14 +4,14 @@
   "/enroll/page": "app/enroll/page.js",
   "/indicators/[id]/page": "app/indicators/[id]/page.js",
   "/page": "app/page.js",
-  "/dashboard/community/page": "app/dashboard/community/page.js",
-  "/dashboard/marketplace/[id]/page": "app/dashboard/marketplace/[id]/page.js",
   "/dashboard/billing/page": "app/dashboard/billing/page.js",
-  "/dashboard/indicators/page": "app/dashboard/indicators/page.js",
-  "/dashboard/news/page": "app/dashboard/news/page.js",
   "/dashboard/courses/page": "app/dashboard/courses/page.js",
+  "/dashboard/indicators/page": "app/dashboard/indicators/page.js",
+  "/dashboard/community/page": "app/dashboard/community/page.js",
   "/dashboard/marketplace/page": "app/dashboard/marketplace/page.js",
   "/dashboard/page": "app/dashboard/page.js",
-  "/dashboard/settings/page": "app/dashboard/settings/page.js",
-  "/dashboard/stats/page": "app/dashboard/stats/page.js"
+  "/dashboard/marketplace/[id]/page": "app/dashboard/marketplace/[id]/page.js",
+  "/dashboard/news/page": "app/dashboard/news/page.js",
+  "/dashboard/stats/page": "app/dashboard/stats/page.js",
+  "/dashboard/settings/page": "app/dashboard/settings/page.js"
 }

@@ -8,37 +8,37 @@ import Image from 'next/image'
 export default function MyCoursesPage() {
     const enrolledCourses = [
         {
-            id: 'tech-analysis',
-            title: 'Technical Analysis Fundamentals',
+            id: 'elliot-wave-gann',
+            title: 'Elliot Wave & Gann Theory',
             instructor: 'Michael Chen',
-            duration: '4 Weeks',
-            totalLessons: 18,
+            duration: '10 Weeks',
+            totalLessons: 30,
             completedLessons: 12,
-            progress: 67,
-            nextLesson: 'Fibonacci Retracement Strategies',
-            image: '/course1.png'
-        },
-        {
-            id: 'intraday-mastery',
-            title: 'Intraday Trading Mastery',
-            instructor: 'Sarah Williams',
-            duration: '8 Weeks',
-            totalLessons: 32,
-            completedLessons: 8,
-            progress: 25,
-            nextLesson: 'Opening Range Breakout',
+            progress: 40,
+            nextLesson: 'Gann Fan & Angles Setup',
             image: '/course3.png'
         },
         {
-            id: 'options-strategies',
-            title: 'Options Trading Strategies',
-            instructor: 'David Kumar',
+            id: 'intraday-tricks',
+            title: 'Intraday Special Tricks',
+            instructor: 'Sarah Williams',
             duration: '6 Weeks',
-            totalLessons: 28,
+            totalLessons: 20,
+            completedLessons: 8,
+            progress: 40,
+            nextLesson: 'Opening Range Breakout',
+            image: '/course1.png'
+        },
+        {
+            id: 'price-action-market-profile',
+            title: 'Price Action & Market Profile',
+            instructor: 'David Kumar',
+            duration: '8 Weeks',
+            totalLessons: 25,
             completedLessons: 15,
-            progress: 54,
-            nextLesson: 'Iron Condor Setup',
-            image: '/course4.png'
+            progress: 60,
+            nextLesson: 'Value Area Analysis',
+            image: '/course2.png'
         }
     ]
 
