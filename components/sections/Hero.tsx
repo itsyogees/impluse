@@ -20,20 +20,20 @@ export default function Hero() {
           Intraday • Instant • Profit
         </div>
 
-        <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-[600px] mx-auto mb-8 sm:mb-12 leading-relaxed px-4">
+        <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-[600px] mx-auto mb-6 sm:mb-12 leading-relaxed px-4">
           Master the art of trading with professional indicators and expert-led courses
         </p>
 
         <div className="flex flex-col items-center gap-6 sm:gap-10">
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center w-full px-8 sm:px-0 max-w-md sm:max-w-none">
             <a
-              href="#indicators"
+              href="/#indicators"
               className="bg-accent-gold px-8 sm:px-10 py-3 sm:py-3.5 rounded-md text-bg-primary font-bold hover:translate-y-[-2px] hover:shadow-[0_10px_30px_rgba(212,175,55,0.3)] transition text-center whitespace-nowrap"
             >
               Explore Indicators
             </a>
             <a
-              href="#courses"
+              href="/#courses"
               className="border-2 border-accent-gold px-8 sm:px-10 py-3 sm:py-3.5 rounded-md text-accent-gold font-bold hover:bg-accent-gold hover:text-bg-primary transition text-center whitespace-nowrap"
             >
               View Courses

@@ -27,12 +27,12 @@ export default function Navigation() {
   }, [isMenuOpen])
 
   const navLinks = [
-    { href: '#features', label: 'Features' },
-    { href: '#indicators', label: 'Indicators' },
-    { href: '#courses', label: 'Courses' },
-    { href: '#news', label: 'News' },
-    { href: '#about', label: 'About' },
-    { href: '#contact', label: 'Contact' },
+    { href: '/#features', label: 'Features' },
+    { href: '/#indicators', label: 'Indicators' },
+    { href: '/#courses', label: 'Courses' },
+    { href: '/#news', label: 'News' },
+    { href: '/#about', label: 'About' },
+    { href: '/#contact', label: 'Contact' },
   ]
 
   return (
@@ -99,7 +99,7 @@ export default function Navigation() {
               transition={{ type: 'spring', damping: 25, stiffness: 200 }}
               className="fixed top-0 right-0 h-screen w-[300px] bg-bg-primary border-l border-border z-50 lg:hidden p-8"
             >
-              <div className="flex justify-end mb-8">
+              <div className="flex justify-end mb-6">
                 <button onClick={() => setIsMenuOpen(false)} className="text-accent-gold">
                   <X size={28} />
                 </button>

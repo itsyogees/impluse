@@ -56,7 +56,7 @@ export default function Contact() {
           </div>
 
           <div className="bg-bg-card border-2 border-border rounded-2xl p-10">
-            <div className="text-center mb-8">
+            <div className="text-center mb-6">
               <div className="flex justify-center mb-4"><Send className="w-12 h-12 text-accent-gold" /></div>
               <h3 className="text-2xl font-bold">Send Message</h3>
             </div>

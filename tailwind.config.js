@@ -29,6 +29,15 @@ module.exports = {
         cinzel: ['Cinzel', 'serif'],
         montserrat: ['Montserrat', 'sans-serif'],
       },
+      keyframes: {
+        ticker: {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(-50%)' },
+        },
+      },
+      animation: {
+        ticker: 'ticker 30s linear infinite',
+      },
     },
   },
   plugins: [],

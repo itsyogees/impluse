@@ -1,56 +1,9 @@
-import { BookOpen, BarChart3, Zap, Target, Briefcase, Search, Clock, FileText } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
+import { Clock, FileText } from 'lucide-react'
+import { courses } from '@/data/courses'
 
 export default function Courses() {
-  const courses = [
-    {
-      icon: <BookOpen className="w-16 h-16 text-accent-gold mx-auto" />,
-      title: 'Technical Analysis Fundamentals',
-      duration: '4 Weeks',
-      level: 'Beginner',
-      lessons: 18,
-      price: '₹9,999'
-    },
-    {
-      icon: <BarChart3 className="w-16 h-16 text-accent-gold mx-auto" />,
-      title: 'Advanced Chart Patterns',
-      duration: '6 Weeks',
-      level: 'Intermediate',
-      lessons: 24,
-      price: '₹14,999'
-    },
-    {
-      icon: <Zap className="w-16 h-16 text-accent-gold mx-auto" />,
-      title: 'Intraday Trading Mastery',
-      duration: '8 Weeks',
-      level: 'Advanced',
-      lessons: 32,
-      price: '₹19,999'
-    },
-    {
-      icon: <Target className="w-16 h-16 text-accent-gold mx-auto" />,
-      title: 'Options Trading Strategies',
-      duration: '6 Weeks',
-      level: 'Intermediate',
-      lessons: 28,
-      price: '₹16,999'
-    },
-    {
-      icon: <Briefcase className="w-16 h-16 text-accent-gold mx-auto" />,
-      title: 'Portfolio Management',
-      duration: '5 Weeks',
-      level: 'Advanced',
-      lessons: 20,
-      price: '₹12,999'
-    },
-    {
-      icon: <Search className="w-16 h-16 text-accent-gold mx-auto" />,
-      title: 'Risk Management Essentials',
-      duration: '3 Weeks',
-      level: 'Beginner',
-      lessons: 15,
-      price: '₹7,999'
-    }
-  ]
 
   return (
     <section id="courses" className="py-24 px-8">
@@ -69,22 +22,31 @@ export default function Courses() {
           {courses.map((course, index) => (
             <div
               key={index}
-              className="bg-bg-card border-2 border-border rounded-2xl overflow-hidden hover:border-accent-gold transition group"
+              className="bg-bg-card border-2 border-border rounded-2xl overflow-hidden hover:border-accent-gold transition group flex flex-col"
             >
-              <div className="bg-bg-secondary p-8 text-center">
-                <div className="mb-4">{course.icon}</div>
-                <h3 className="text-xl font-bold group-hover:text-accent-gold transition">
-                  {course.title}
-                </h3>
-              </div>
+              <Link href={`/courses/${course.id}`} className="relative h-48 sm:h-56 overflow-hidden">
+                <Image
+                  src={course.image}
+                  alt={course.title}
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-bg-card/90 to-transparent opacity-60" />
+              </Link>
 
-              <div className="p-6">
+              <div className="p-6 flex-1 flex flex-col">
+                <Link href={`/courses/${course.id}`}>
+                  <h3 className="text-xl font-bold mb-4 group-hover:text-accent-gold transition">
+                    {course.title}
+                  </h3>
+                </Link>
+
                 <div className="flex items-center justify-between mb-4 text-sm text-text-secondary">
-                  <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {course.duration}</span>
-                  <span className="flex items-center gap-1"><FileText className="w-4 h-4" /> {course.lessons} Lessons</span>
+                  <span className="flex items-center gap-1"><Clock className="w-4 h-4 text-accent-gold" /> {course.duration}</span>
+                  <span className="flex items-center gap-1"><FileText className="w-4 h-4 text-accent-gold" /> {course.lessons} Lessons</span>
                 </div>
 
-                <div className="flex items-center justify-between mb-4">
+                <div className="flex items-center justify-between mb-6 mt-auto">
                   <span className={`px-3 py-1 rounded-full text-xs font-semibold ${course.level === 'Beginner' ? 'bg-accent-green/20 text-accent-green' :
                     course.level === 'Intermediate' ? 'bg-blue-500/20 text-blue-400' :
                       'bg-red-500/20 text-red-400'
@@ -94,9 +56,12 @@ export default function Courses() {
                   <span className="text-2xl font-bold text-accent-gold">{course.price}</span>
                 </div>
 
-                <button className="w-full bg-accent-gold text-bg-primary py-3 rounded-md font-bold hover:bg-accent-gold/90 transition">
+                <Link
+                  href={`/enroll?courseId=${course.id}`}
+                  className="w-full bg-accent-gold text-bg-primary py-3 rounded-md font-bold hover:bg-accent-gold/90 transition shadow-lg shadow-accent-gold/10 text-center"
+                >
                   Enroll Now
-                </button>
+                </Link>
               </div>
             </div>
           ))}

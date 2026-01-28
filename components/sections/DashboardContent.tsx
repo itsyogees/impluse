@@ -48,61 +48,61 @@ export default function DashboardContent() {
   ]
 
   return (
-    <main className="flex-1 ml-[250px] p-8 w-[calc(100%-250px)]">
-      {/* Top Bar */}
-      <div className="flex justify-between items-center mb-8">
+    <main className="p-4 md:p-8 w-full">
+      {/* Top Bar - Managed by DashboardPageWrapper usually, but here it's in DashboardContent */}
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
         <div className="flex items-center gap-3">
-          <h1 className="font-cinzel text-4xl font-bold mb-2">Welcome back, John</h1>
-          <User className="w-8 h-8 text-accent-gold mb-2" />
+          <h1 className="font-cinzel text-2xl md:text-3xl lg:text-4xl font-bold">Welcome back, John</h1>
+          <User className="w-6 h-6 md:w-8 h-8 text-accent-gold" />
         </div>
-        <div className="flex gap-4">
-          <button className="w-12 h-12 bg-bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent-gold transition">
+        <div className="flex gap-3 md:gap-4 w-full md:w-auto overflow-x-auto pb-2 md:pb-0">
+          <button className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent-gold transition">
             <Search className="w-5 h-5 text-text-secondary" />
           </button>
-          <button className="w-12 h-12 bg-bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent-gold transition relative">
+          <button className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent-gold transition relative">
             <Bell className="w-5 h-5 text-text-secondary" />
-            <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 rounded-full flex items-center justify-center text-xs font-bold">
+            <span className="absolute -top-1 -right-1 w-4 h-4 md:w-5 md:h-5 bg-red-500 rounded-full flex items-center justify-center text-[10px] md:text-xs font-bold">
               3
             </span>
           </button>
-          <button className="w-12 h-12 bg-bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent-gold transition">
+          <button className="flex-shrink-0 w-10 h-10 md:w-12 md:h-12 bg-bg-card border border-border rounded-xl flex items-center justify-center hover:border-accent-gold transition">
             <Star className="w-5 h-5 text-text-secondary" />
           </button>
         </div>
       </div>
 
       {/* Stats Grid */}
-      <div className="grid grid-cols-4 gap-6 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-6">
         {stats.map((stat, index) => (
-          <div key={index} className="bg-bg-card border-2 border-border rounded-2xl p-7 hover:border-accent-gold transition">
+          <div key={index} className="bg-bg-card border-2 border-border rounded-2xl p-5 md:p-7 hover:border-accent-gold transition">
             <div className="flex justify-between items-start mb-4">
               <div>{stat.icon}</div>
               <div className="text-accent-green text-sm font-semibold">{stat.trend}</div>
             </div>
-            <div className="text-4xl font-bold mb-2">{stat.value}</div>
+            <div className="text-3xl md:text-4xl font-bold mb-2">{stat.value}</div>
             <div className="text-text-secondary text-sm">{stat.label}</div>
           </div>
         ))}
       </div>
 
       {/* Dashboard Grid */}
-      <div className="grid grid-cols-2 gap-8">
+      <div className="grid grid-cols-1 xl:grid-cols-2 gap-6 md:gap-8">
         {/* Continue Learning */}
-        <div className="bg-bg-card border-2 border-border rounded-2xl p-8">
+        <div className="bg-bg-card border-2 border-border rounded-2xl p-5 md:p-8">
           <div className="flex justify-between items-center mb-6">
-            <h2 className="text-2xl font-bold">Continue Learning</h2>
+            <h2 className="text-xl md:text-2xl font-bold">Continue Learning</h2>
             <a href="#" className="text-accent-gold hover:underline text-sm">View All →</a>
           </div>
 
           <div className="space-y-6">
             {courses.map((course, index) => (
-              <div key={index} className="flex gap-4">
-                <div className="w-16 h-16 bg-bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+              <div key={index} className="flex flex-col sm:flex-row gap-4">
+                <div className="w-14 h-14 md:w-16 md:h-16 bg-bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                   {course.icon}
                 </div>
                 <div className="flex-1">
-                  <div className="font-bold mb-2">{course.title}</div>
-                  <div className="flex gap-4 text-sm text-text-secondary mb-3">
+                  <div className="font-bold mb-1 md:mb-2">{course.title}</div>
+                  <div className="flex flex-wrap gap-x-4 gap-y-1 text-xs md:text-sm text-text-secondary mb-3">
                     <span className="flex items-center gap-1"><Clock className="w-4 h-4" /> {course.duration}</span>
                     <span className="flex items-center gap-1"><FileText className="w-4 h-4" /> Lesson {course.lesson}</span>
                   </div>
@@ -120,40 +120,40 @@ export default function DashboardContent() {
         </div>
 
         {/* Right Column */}
-        <div className="space-y-8">
+        <div className="space-y-6 md:space-y-8">
           {/* Quick Actions */}
-          <div className="bg-bg-card border-2 border-border rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-6">Quick Actions</h2>
-            <div className="grid grid-cols-2 gap-4">
+          <div className="bg-bg-card border-2 border-border rounded-2xl p-5 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-6">Quick Actions</h2>
+            <div className="grid grid-cols-2 sm:grid-cols-4 xl:grid-cols-2 gap-4">
               {[
-                { icon: <BookOpen className="w-8 h-8 text-accent-gold" />, label: 'Browse Courses' },
-                { icon: <BarChart3 className="w-8 h-8 text-accent-gold" />, label: 'Get Indicators' },
-                { icon: <TrendingUp className="w-8 h-8 text-accent-gold" />, label: 'View Stats' },
-                { icon: <MessageSquare className="w-8 h-8 text-accent-gold" />, label: 'Get Support' },
+                { icon: <BookOpen className="w-6 h-6 md:w-8 h-8 text-accent-gold" />, label: 'Browse Courses', href: '/dashboard/marketplace' },
+                { icon: <BarChart3 className="w-6 h-6 md:w-8 h-8 text-accent-gold" />, label: 'Get Indicators', href: '/dashboard/marketplace' },
+                { icon: <TrendingUp className="w-6 h-6 md:w-8 h-8 text-accent-gold" />, label: 'View Stats', href: '/dashboard/stats' },
+                { icon: <MessageSquare className="w-6 h-6 md:w-8 h-8 text-accent-gold" />, label: 'Get Support', href: '/dashboard/community' },
               ].map((action, index) => (
                 <button
                   key={index}
-                  className="bg-bg-secondary border border-border rounded-xl p-6 hover:border-accent-gold transition text-center flex flex-col items-center gap-2"
+                  className="bg-bg-secondary border border-border rounded-xl p-4 md:p-6 hover:border-accent-gold transition text-center flex flex-col items-center gap-2 group"
                 >
-                  <div>{action.icon}</div>
-                  <div className="text-sm font-semibold">{action.label}</div>
+                  <div className="group-hover:scale-110 transition-transform">{action.icon}</div>
+                  <div className="text-[10px] sm:text-xs md:text-sm font-semibold">{action.label}</div>
                 </button>
               ))}
             </div>
           </div>
 
           {/* Recent Activity */}
-          <div className="bg-bg-card border-2 border-border rounded-2xl p-8">
-            <h2 className="text-2xl font-bold mb-6">Recent Activity</h2>
+          <div className="bg-bg-card border-2 border-border rounded-2xl p-5 md:p-8">
+            <h2 className="text-xl md:text-2xl font-bold mb-6">Recent Activity</h2>
             <div className="space-y-4">
               {activities.map((activity, index) => (
                 <div key={index} className="flex items-start gap-4">
-                  <div className="w-12 h-12 bg-bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
+                  <div className="w-10 h-10 md:w-12 md:h-12 bg-bg-secondary rounded-xl flex items-center justify-center flex-shrink-0">
                     {activity.icon}
                   </div>
-                  <div className="flex-1">
-                    <div className="font-semibold mb-1">{activity.title}</div>
-                    <div className="text-sm text-text-secondary">{activity.time}</div>
+                  <div className="flex-1 min-w-0">
+                    <div className="font-semibold text-sm md:text-base mb-1 truncate">{activity.title}</div>
+                    <div className="text-[10px] md:text-xs text-text-secondary">{activity.time}</div>
                   </div>
                 </div>
               ))}
