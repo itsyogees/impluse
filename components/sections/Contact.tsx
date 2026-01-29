@@ -17,7 +17,7 @@ export default function Contact() {
   }
 
   return (
-    <section id="contact" className="py-24 px-8 bg-bg-secondary">
+    <section id="contact" className="py-20 px-6 bg-bg-secondary">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-16">
           <div className="text-sm text-accent-gold uppercase tracking-[2px] mb-4">Get in Touch</div>
@@ -29,9 +29,9 @@ export default function Contact() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10">
           <div className="space-y-8">
-            <div className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition">
+            <div className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition">
               <div className="mb-4"><Mail className="w-12 h-12 text-accent-gold" /></div>
               <h3 className="text-2xl font-bold mb-2">Email Us</h3>
               <p className="text-text-secondary mb-4">For general inquiries and support</p>
@@ -39,7 +39,7 @@ export default function Contact() {
               <p className="text-accent-gold">hello@impulse.com</p>
             </div>
 
-            <div className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition">
+            <div className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition">
               <div className="mb-4"><Phone className="w-12 h-12 text-accent-gold" /></div>
               <h3 className="text-2xl font-bold mb-2">Call Us</h3>
               <p className="text-text-secondary mb-4">Available Monday - Saturday, 9 AM - 6 PM IST</p>
@@ -47,7 +47,7 @@ export default function Contact() {
               <p className="text-accent-gold">+91 98765 43211</p>
             </div>
 
-            <div className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition">
+            <div className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition">
               <div className="mb-4"><MessageSquare className="w-12 h-12 text-accent-gold" /></div>
               <h3 className="text-2xl font-bold mb-2">WhatsApp</h3>
               <p className="text-text-secondary mb-4">Quick support via WhatsApp</p>
@@ -55,7 +55,7 @@ export default function Contact() {
             </div>
           </div>
 
-          <div className="bg-bg-card border-2 border-border rounded-2xl p-10">
+          <div className="bg-bg-card border-2 border-border rounded-2xl p-8">
             <div className="text-center mb-6">
               <div className="flex justify-center mb-4"><Send className="w-12 h-12 text-accent-gold" /></div>
               <h3 className="text-2xl font-bold">Send Message</h3>

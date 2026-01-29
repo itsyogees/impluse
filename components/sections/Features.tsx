@@ -35,7 +35,7 @@ export default function Features() {
   ]
 
   return (
-    <section id="features" className="py-24 px-8 relative">
+    <section id="features" className="py-20 px-6 relative">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-16">
           <div className="text-sm text-accent-gold uppercase tracking-[2px] mb-4">Why Choose Us</div>
@@ -47,11 +47,11 @@ export default function Features() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {features.map((feature, index) => (
             <div
               key={index}
-              className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition group"
+              className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition group"
             >
               <div className="mb-4">{feature.icon}</div>
               <h3 className="text-xl font-bold mb-3 group-hover:text-accent-gold transition">

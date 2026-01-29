@@ -2,11 +2,11 @@ import { TrendingUp } from 'lucide-react'
 
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-6 sm:px-8 pt-20 sm:pt-24 pb-16 bg-gradient-to-br from-bg-primary to-bg-secondary relative overflow-hidden">
+    <section className="min-h-screen flex items-center px-6 sm:px-8 pt-32 sm:pt-36 pb-20 bg-gradient-to-br from-bg-primary to-bg-secondary relative overflow-hidden">
       <div className="absolute inset-0 bg-[linear-gradient(rgba(212,175,55,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(212,175,55,0.03)_1px,transparent_1px)] bg-[length:30px_30px] sm:bg-[length:50px_50px] z-0" />
 
       <div className="max-w-[1400px] mx-auto text-center relative z-10">
-        <h1 className="font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-[6px] sm:tracking-[10px] md:tracking-[12px] text-accent-gold mb-4 sm:mb-6 opacity-90 leading-none">
+        <h1 className="font-cinzel text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-[6px] sm:tracking-[10px] md:tracking-[12px] text-accent-gold mb-4 opacity-90 leading-none">
           IMPULSE
         </h1>
 
@@ -20,7 +20,7 @@ export default function Hero() {
           Intraday • Instant • Profit
         </div>
 
-        <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-[600px] mx-auto mb-6 sm:mb-12 leading-relaxed px-4">
+        <p className="text-sm sm:text-base md:text-lg text-text-secondary max-w-[600px] mx-auto mb-10 leading-relaxed px-4">
           Master the art of trading with professional indicators and expert-led courses
         </p>
 

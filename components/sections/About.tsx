@@ -1,6 +1,6 @@
 export default function About() {
   return (
-    <section id="about" className="py-24 px-8">
+    <section id="about" className="py-20 px-6">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-16">
           <div className="text-sm text-accent-gold uppercase tracking-[2px] mb-4">Our Story</div>
@@ -12,7 +12,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div className="space-y-6">
             <h3 className="text-3xl font-bold">Building the Future of Trading Education</h3>
             <p className="text-text-secondary leading-relaxed">
@@ -32,7 +32,7 @@ export default function About() {
           </div>
 
           <div className="space-y-6">
-            <div className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition">
+            <div className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition">
               <h4 className="text-xl font-bold mb-3">Our Mission</h4>
               <p className="text-text-secondary">
                 To provide world-class trading education and tools that empower individuals to achieve
@@ -40,7 +40,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition">
+            <div className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition">
               <h4 className="text-xl font-bold mb-3">Our Vision</h4>
               <p className="text-text-secondary">
                 To become the global standard for trading education, creating a community of successful
@@ -48,7 +48,7 @@ export default function About() {
               </p>
             </div>
 
-            <div className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition">
+            <div className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition">
               <h4 className="text-xl font-bold mb-3">Our Values</h4>
               <p className="text-text-secondary">
                 Excellence, integrity, innovation, and student success. We&apos;re committed to continuously

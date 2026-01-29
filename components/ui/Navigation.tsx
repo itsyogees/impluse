@@ -27,12 +27,14 @@ export default function Navigation() {
   }, [isMenuOpen])
 
   const navLinks = [
-    { href: '/#features', label: 'Features' },
-    { href: '/#indicators', label: 'Indicators' },
-    { href: '/#courses', label: 'Courses' },
-    { href: '/#news', label: 'News' },
-    { href: '/#about', label: 'About' },
-    { href: '/#contact', label: 'Contact' },
+    { href: '/#features', label: 'Features', isAnchor: true },
+    { href: '/#indicators', label: 'Indicators', isAnchor: true },
+    { href: '/#courses', label: 'Courses', isAnchor: true },
+    { href: '/premium-courses', label: 'Premium Courses', isAnchor: false }, // This will open a new page
+    { href: '/#news', label: 'News', isAnchor: true },
+    { href: '/#about', label: 'About', isAnchor: true },
+    { href: '/#contact', label: 'Contact', isAnchor: true },
+
   ]
 
   return (
@@ -57,14 +59,20 @@ export default function Navigation() {
         <ul className="hidden lg:flex gap-8 xl:gap-10 items-center">
           {navLinks.map((link) => (
             <li key={link.href}>
-              <a href={link.href} className="text-text-secondary hover:text-accent-gold transition font-medium text-sm">
-                {link.label}
-              </a>
+              {link.isAnchor ? (
+                <a href={link.href} className="text-text-secondary hover:text-accent-gold transition font-medium text-sm">
+                  {link.label}
+                </a>
+              ) : (
+                <Link href={link.href} className="text-text-secondary hover:text-accent-gold transition font-medium text-sm">
+                  {link.label}
+                </Link>
+              )}
             </li>
           ))}
           <li>
             <Link
-              href="/dashboard"
+              href="/login"
               className="border-2 border-accent-green px-7 py-2.5 rounded-md text-accent-green font-semibold hover:bg-accent-green hover:text-bg-primary transition"
             >
               Login
@@ -108,18 +116,28 @@ export default function Navigation() {
               <ul className="flex flex-col gap-6">
                 {navLinks.map((link) => (
                   <li key={link.href}>
-                    <a
-                      href={link.href}
-                      onClick={() => setIsMenuOpen(false)}
-                      className="text-xl text-text-secondary hover:text-accent-gold transition font-medium block"
-                    >
-                      {link.label}
-                    </a>
+                    {link.isAnchor ? (
+                      <a
+                        href={link.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-xl text-text-secondary hover:text-accent-gold transition font-medium block"
+                      >
+                        {link.label}
+                      </a>
+                    ) : (
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsMenuOpen(false)}
+                        className="text-xl text-text-secondary hover:text-accent-gold transition font-medium block"
+                      >
+                        {link.label}
+                      </Link>
+                    )}
                   </li>
                 ))}
                 <li className="pt-6 border-t border-border">
                   <Link
-                    href="/dashboard"
+                    href="/login"
                     onClick={() => setIsMenuOpen(false)}
                     className="w-full inline-block text-center border-2 border-accent-green px-7 py-3 rounded-md text-accent-green font-semibold hover:bg-accent-green hover:text-bg-primary transition"
                   >

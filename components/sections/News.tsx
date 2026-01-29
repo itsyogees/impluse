@@ -26,7 +26,7 @@ export default function News() {
   ]
 
   return (
-    <section id="news" className="py-24 px-8 bg-bg-secondary">
+    <section id="news" className="py-20 px-6 bg-bg-secondary">
       <div className="max-w-[1400px] mx-auto">
         <div className="text-center mb-16">
           <div className="text-sm text-accent-gold uppercase tracking-[2px] mb-4">Stay Informed</div>
@@ -42,7 +42,7 @@ export default function News() {
           {newsItems.map((item, index) => (
             <div
               key={index}
-              className="bg-bg-card border-2 border-border rounded-2xl p-8 hover:border-accent-gold transition group cursor-pointer"
+              className="bg-bg-card border-2 border-border rounded-2xl p-6 hover:border-accent-gold transition group cursor-pointer"
             >
               <div className="flex items-center justify-between mb-4">
                 <span className="text-sm text-accent-gold font-semibold">{item.category}</span>

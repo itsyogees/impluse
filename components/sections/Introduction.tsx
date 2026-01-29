@@ -14,12 +14,12 @@ export default function Introduction() {
     ]
 
     return (
-        <section id="introduction" className="py-24 px-8 relative overflow-hidden bg-bg-primary">
+        <section id="introduction" className="py-20 px-6 relative overflow-hidden bg-bg-primary">
             {/* Background Glow */}
             <div className="absolute top-1/2 left-0 -translate-y-1/2 w-[500px] h-[500px] bg-accent-gold/5 blur-[120px] rounded-full pointer-events-none" />
 
             <div className="max-w-[1400px] mx-auto relative z-10">
-                <div className="text-center mb-16">
+                <div className="text-center mb-12">
                     <h2 className="font-cinzel text-[3rem] font-bold uppercase tracking-[3px] text-accent-green select-none drop-shadow-[0_0_15px_rgba(34,197,94,0.5)]">
                         Introduction
                     </h2>
@@ -28,7 +28,7 @@ export default function Introduction() {
                     </div>
                 </div>
 
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                     {/* Left Side: Video/Image Mockup */}
                     <motion.div
                         initial={{ opacity: 0, x: -50 }}
@@ -90,7 +90,7 @@ export default function Introduction() {
 
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
                             {features.map((feature, idx) => (
-                                <div key={idx} className="flex items-center gap-3 p-4 bg-bg-card border border-border rounded-2xl hover:border-accent-gold/30 transition-colors group/item">
+                                <div key={idx} className="flex items-center gap-3 p-3 bg-bg-card border border-border rounded-2xl hover:border-accent-gold/30 transition-colors group/item">
                                     <div className="w-10 h-10 rounded-xl bg-bg-secondary flex items-center justify-center text-accent-gold group-hover/item:bg-accent-gold group-hover/item:text-bg-primary transition-all shadow-lg">
                                         {feature.icon}
                                     </div>
